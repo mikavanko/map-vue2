@@ -1,0 +1,136 @@
+@mixin clear-button(){
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin clear-input(){
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-color: transparent;
+  font-family: $Inter;
+  width: 100%;
+}
+
+@mixin submit-button($height: 56px){
+  @include clear-button();
+
+  min-height: $height;
+  height: $height;
+  background: $color-primary;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-light;
+  font-family: $Inter;
+
+  &:disabled{
+    background-color: $color-dark-20;
+    cursor: not-allowed;
+  }
+}
+
+@mixin secondary-button($height: 56px){
+  @include clear-button();
+
+  min-height: $height;
+  height: $height;
+  background: transparent;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  font-family: $Inter;
+}
+
+@mixin button-cancel-small($height: 30px){
+  @include clear-button();
+
+  height: $height;
+  min-height: $height;
+  line-height: $height;
+  background: $color-light;
+  width: auto;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  font-family: $Inter;
+  cursor: pointer;
+  text-align: center;
+
+  &:disabled{
+    background-color: $color-dark-20;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-primary-small($height: 30px){
+  @include clear-button();
+
+  height: $height;
+  min-height: $height;
+  line-height: $height;
+  background: $color-primary;
+  width: auto;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: $color-light;
+  font-family: $Inter;
+  cursor: pointer;
+  text-align: center;
+
+  &:disabled{
+    background-color: $color-dark-20;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-secondary-small($height: 30px){
+  @include clear-button();
+
+  height: $height;
+  min-height: $height;
+  line-height: $height;
+  background: $color-light;
+  width: auto;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: $color-dark-70;
+  font-family: $Inter;
+  cursor: pointer;
+  border: 1px solid $color-dark-20;
+  text-align: center;
+
+  &:disabled{
+    background-color: $color-dark-20;
+    cursor: not-allowed;
+  }
+}
